@@ -13,9 +13,6 @@ function getComputerChoice() {
       break;
   }
 }
-// for (i = 0; i < 20; i++) {
-//   console.log(getComputerChoice())
-// }
 
 // create function getHumanChoice based on the user input will return one of the choices: rock, paper, scissors
 function getHumanChoice() {
@@ -29,7 +26,6 @@ function getHumanChoice() {
   } while (humanChoice !== 'rock' && humanChoice !== 'paper' && humanChoice !== 'scissors')
   return humanChoice;
 }
-// getHumanChoice()
 
 
 // create function playGame that calls playRound 5 times and declares the winner at the end.
@@ -55,40 +51,40 @@ function playGame() {
   }
 
 
-// create function playRound that plays one round of rock paper scissors
-function playRound() {
-  //    create variable humanChoice which contains the choice of the human
-  //    create variable computerChoice which contains the choice of the computer
-  const humanChoice = getHumanChoice().toLowerCase();
-  const computerChoice = getComputerChoice().toLowerCase();
+  // create function playRound that plays one round of rock paper scissors
+  function playRound() {
+    //    create variable humanChoice which contains the choice of the human
+    //    create variable computerChoice which contains the choice of the computer
+    const humanChoice = getHumanChoice().toLowerCase();
+    const computerChoice = getComputerChoice().toLowerCase();
 
-  //    compare the choices and the choices should be case-insensitive
-  if (humanChoice === computerChoice) {
-    console.log(`It's a tie!`)
-  } 
-  // human win conditions
-  else if (humanChoice == 'rock' && computerChoice == 'scissors')  {
-    console.log(`You win the round! Rock beats scissors!`)
-    humanScore++;
-  } else if (humanChoice == 'paper' && computerChoice == 'rock') {
-    console.log(`You win the round! Paper beats rock!`)
-    humanScore++;
-  } else if (humanChoice == 'scissors' && computerChoice == 'paper') {
-    console.log(`You win the round! Scissors beats paper!`)
-    humanScore++;
+    //    compare the choices and the choices should be case-insensitive
+    if (humanChoice === computerChoice) {
+      console.log(`It's a tie!`)
+    } 
+    // human win conditions
+    else if (humanChoice == 'rock' && computerChoice == 'scissors')  {
+      console.log(`You win the round! Rock beats scissors!`)
+      humanScore++;
+    } else if (humanChoice == 'paper' && computerChoice == 'rock') {
+      console.log(`You win the round! Paper beats rock!`)
+      humanScore++;
+    } else if (humanChoice == 'scissors' && computerChoice == 'paper') {
+      console.log(`You win the round! Scissors beats paper!`)
+      humanScore++;
+    }
+    // computer win conditions
+    else if (computerChoice == 'rock' && humanChoice == 'scissors')  {
+      console.log(`Computer wins the round! Rock beats scissors!`)
+      computerScore++;
+    } else if (computerChoice == 'paper' && humanChoice == 'rock') {
+      console.log(`Computer wins the round! Paper beats rock!`)
+      computerScore++;
+    } else if (computerChoice == 'scissors' && humanChoice == 'paper') {
+      console.log(`Computer wins the round! Scissors beats paper!`)
+      computerScore++;
+    }
   }
-  // computer win conditions
-  else if (computerChoice == 'rock' && humanChoice == 'scissors')  {
-    console.log(`Computer wins the round! Rock beats scissors!`)
-    computerScore++;
-  } else if (computerChoice == 'paper' && humanChoice == 'rock') {
-    console.log(`Computer wins the round! Paper beats rock!`)
-    computerScore++;
-  } else if (computerChoice == 'scissors' && humanChoice == 'paper') {
-    console.log(`Computer wins the round! Scissors beats paper!`)
-    computerScore++;
-  }
-}
 }
 
 playGame();
