@@ -4,13 +4,10 @@ function getComputerChoice() {
   switch (randomOfThree) {
     case (1):
       return 'rock';
-      break;
     case (2):
       return 'paper';
-      break;
     case (3):
       return 'scissors'
-      break;
   }
 }
 
@@ -19,11 +16,16 @@ function getHumanChoice() {
   let humanChoice = null;
   do {
     humanChoice = prompt('Rock, Paper, or Scissors?').toLowerCase();
-    if (humanChoice !== 'rock' && humanChoice !== 'paper' && humanChoice !== 'scissors') {
-      console.log('Not a valid choice')
+    if (humanChoice !== 'rock' 
+        && humanChoice !== 'paper' 
+        && humanChoice !== 'scissors') {
+      console.log('Not a valid choice');
     }
 
-  } while (humanChoice !== 'rock' && humanChoice !== 'paper' && humanChoice !== 'scissors')
+  } while (humanChoice !== 'rock' 
+            && humanChoice !== 'paper' 
+            && humanChoice !== 'scissors')
+  
   return humanChoice;
 }
 
@@ -38,16 +40,16 @@ function playGame() {
   for (i = 1; i <= 5; i++) {
     console.log(`Round ${i}`);
     playRound();
-    console.log(`Current Score`)
-    console.log(`You: ${humanScore} Computer:${computerScore}`)
+    console.log(`Current Score`);
+    console.log(`You: ${humanScore} Computer:${computerScore}`);
   }
 
   if (humanScore > computerScore) {
-    console.log('You win the Game!')
+    console.log('You win the Game!');
   } else if (computerScore > humanScore) {
-    console.log('Computer wins the Game!')
+    console.log('Computer wins the Game!');
   } else {
-    console.log(`The Game is a tie!`)
+    console.log(`The Game is a tie!`);
   }
 
 
@@ -60,7 +62,7 @@ function playGame() {
 
     //    compare the choices and the choices should be case-insensitive
     if (humanChoice === computerChoice) {
-      console.log(`It's a tie!`)
+      console.log(`It's a tie!`);
     } 
     // human win conditions
     else if (humanChoice == 'rock' && computerChoice == 'scissors')  {
