@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang='en'>
-  <head>
-    <meta charset='UTF-8'>
-    <title>Rock, Paper, Scissors!</title>
-    <script src='./javascript.js'></script>
-  </head>
-  <body>
 
-  </body>
+<head>
+  <meta charset='UTF-8'>
+  <title>Rock, Paper, Scissors!</title>
+  <script src='./javascript.js'></script>
+  <link rel='stylesheet' href='./styles.css'>
+</head>
+
+<body class='container'>
+  <div class='scores'>
+    <div>
+      Players Score: <span class='players-score'>0</span>
+    </div>
+    <div>
+      Computes Score: <span class='computers-score'>0</span>
+    </div>
+  </div>
+  <div class='computers-choice-container'>
+    <span>Computers Choice</span>
+    <img class='computers-choice' src='./images/rock.png'>
+  </div>
+  <div class='players-choices-container'>
+    <span>Choose an option</span>
+    <div class='players-choices'>
+      <button class='rock-button' value='rock'>
+        <img src='./images/rock.png'>
+      </button>
+      <button class='paper-button' value='paper'>
+        <img src='./images/paper.png'>
+      </button>
+      <button class='scissors-button' value='scissors'>
+        <img src='./images/scissors.png'>
+      </button>
+    </div>
+  </div>
+</body>
+
 </html>
