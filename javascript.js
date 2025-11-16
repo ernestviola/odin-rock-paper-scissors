@@ -37,22 +37,6 @@ function playGame() {
   // create variable computerScore to keep track of the computer's wins
   let computerScore = 0;
 
-  for (i = 1; i <= 5; i++) {
-    console.log(`Round ${i}`);
-    playRound();
-    console.log(`Current Score`);
-    console.log(`You: ${humanScore} Computer:${computerScore}`);
-  }
-
-  if (humanScore > computerScore) {
-    console.log('You win the Game!');
-  } else if (computerScore > humanScore) {
-    console.log('Computer wins the Game!');
-  } else {
-    console.log(`The Game is a tie!`);
-  }
-
-
   // create function playRound that plays one round of rock paper scissors
   function playRound() {
     //    create variable humanChoice which contains the choice of the human
@@ -88,5 +72,3 @@ function playGame() {
     }
   }
 }
-
-playGame();
