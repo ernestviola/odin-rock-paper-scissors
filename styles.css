@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 img {
@@ -43,4 +44,9 @@ button:hover {
 
 .players-choices button {
   margin: 16px 8px;
+}
+
+.results {
+  text-align: center;
+  font-size: 32px;
 }
